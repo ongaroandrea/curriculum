@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoundSense - Andrea Ongaro</title>
+  <meta name="description" content="BSc thesis: an iOS app and a Python server that turn health and screen-time data into music, to make people more aware of their digital habits.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">SoundSense</h1>
+        <p class="project-lede">Raising Awareness About Digital Wellbeing: Data Visualization and Sonification in a Mobile Application. An iPhone app that turns your steps, heart rate and screen time into short pieces of music.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Author</dd></div>
+          <div><dt>When</dt><dd>2023</dd></div>
+          <div><dt>Context</dt><dd>BSc thesis, Università di Bologna</dd></div>
+          <div><dt>Supervisors</dt><dd>Dr. Catia Prandi, Dr. Chiara Ceccarini (co-supervisor)</dd></div>
+          <div><dt>Stack</dt><dd>Swift, SwiftUI, HealthKit, Python, Flask, SQLAlchemy, music21</dd></div>
+        </dl>
+        <ul class="project-links">
+          <li><a href="https://github.com/ongaroandrea/SoundSense_Client">iOS client on GitHub</a></li>
+          <li><a href="https://github.com/ongaroandrea/SoundSense_Server">Server on GitHub</a></li>
+        </ul>
+      </header>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">The idea</h2>
+        <div class="prose">
+          <p>Phones and social media get blamed for a lot. Digital wellbeing asks a more useful question: how does the technology we use affect our health, and how do we keep the good parts?</p>
+          <p>Charts are the usual answer, but they assume you're comfortable reading numbers, and they leave out people who can't see them. Sonification turns data into sound instead. I wanted to find out whether hearing your own data makes it easier to notice your habits.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="build">
+        <h2 id="build">What I built</h2>
+        <ul class="entry-points prose">
+          <li>An iOS app in Swift and SwiftUI. It reads step count, distance, heart rate, walking speed and screen time from HealthKit. You pick an instrument (violin, piano or bass) and a length, and it plays the result. Past tracks are saved, and a notification reminds you to listen.</li>
+          <li>A small Flask API in Python. It maps the data to notes with music21, midiutil and audiolazy, renders the MIDI to FLAC, and stores every track with SQLAlchemy.</li>
+        </ul>
+      </section>
+
+      <section class="cv-section" aria-labelledby="gallery">
+        <h2 id="gallery">Screenshots</h2>
+        <div class="gallery phones">
+          <figure>
+            <img src="../assets/images/projects/soundsense/app-home.jpg" alt="Home screen listing data sources to sonify: steps, distance, heart rate, walking speed" width="645" height="1400" loading="lazy">
+            <figcaption>Pick the data.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/soundsense/app-passi.jpg" alt="Step count screen with instrument and length options" width="645" height="1400" loading="lazy">
+            <figcaption>Pick an instrument and a length.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/soundsense/app-utilizzo.jpg" alt="Device usage screen with instrument and length options" width="645" height="1400" loading="lazy">
+            <figcaption>Screen time works the same way.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/soundsense/app-audio.jpg" alt="Music player playing the step count track" width="645" height="1400" loading="lazy">
+            <figcaption>Then listen.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM-Supervised Video Temporal Grounding - Andrea Ongaro</title>
+  <meta name="description" content="Using queries written by Gemma instead of manual labels to train temporal grounding on egocentric video.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">LLM-Supervised Video Temporal Grounding</h1>
+        <p class="project-lede">Temporal grounding means finding the moment in a video that answers a question. Writing those questions by hand is slow, so we had an LLM write them.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Team lead, 3 members</dd></div>
+          <div><dt>Context</dt><dd>Advanced Machine Learning, Politecnico di Torino</dd></div>
+          <div><dt>Team</dt><dd>Andrea Ongaro, Davide Ravidà, Paola Verrone</dd></div>
+          <div><dt>Stack</dt><dd>PyTorch, Gemma, VSLNet, EgoVLP, Omnivore, GloVe, BERT</dd></div>
+        </dl>
+        <ul class="project-links">
+          <li><a href="https://github.com/ongaroandrea/advanced-machine-learning">Code on GitHub</a></li>
+        </ul>
+      </header>
+
+      <figure class="hero-figure">
+        <img src="../assets/images/projects/video-grounding/query-templates.jpg" alt="Bar chart of how many queries fall under each question template" width="1394" height="1076">
+      </figure>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <div class="prose">
+          <p>We gave Gemma the narrations of egocentric videos and asked it for natural-language questions about them. We pretrained VSLNet on those generated questions, then fine-tuned it on frozen EgoVLP and Omnivore features.</p>
+          <p>The code is four notebooks: feature extraction and training (with GloVe or BERT for the text), narration processing, question generation with Gemma, and fine-tuning. A couple of small scripts merge and clean the generated files.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="results">
+        <h2 id="results">Results</h2>
+        <div class="prose">
+          <p>With LLM-written questions, GloVe embeddings did better than BERT.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="gallery">
+        <h2 id="gallery">Looking at the data</h2>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/images/projects/video-grounding/clip-durations.jpg" alt="Histogram of clip durations, with most clips around 480 seconds" width="1324" height="778" loading="lazy">
+            <figcaption>Clip lengths: most clips are about eight minutes.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/video-grounding/short-responses.jpg" alt="Histogram of relative query sizes below 0.2" width="1306" height="778" loading="lazy">
+            <figcaption>Most answers cover a tiny slice of the clip.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

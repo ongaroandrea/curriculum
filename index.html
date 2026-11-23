@@ -1,187 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrea Ongaro - Curriculum Vitae</title>
+  <meta name="description" content="CV of Andrea Ongaro, software engineer working on backend systems and AI, with an MSc in Computer Engineering from Politecnico di Torino.">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
 
-    <!-- 
-      TODO
+  <link rel="preload" href="./assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./css/styles.css">
 
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+  <div class="page">
+    <!-- HEADER: name, headline and contact details -->
+    <header class="cv-header">
+      <h1 class="cv-name">Andrea Ongaro</h1>
+      <p class="cv-headline">Software Engineer - Backend and AI</p>
+      <p class="cv-meta">Rimini, Italy</p>
 
-      This should be the same across all pages.
-     -->
-    <link rel="icon" href="./assets/images/1311.png" />
-		<title>Unemployables Portfolio</title>
-    <meta name="description" content="A portfolio template for the Unemployables community.">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <ul class="cv-contact">
+        <li><a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></li>
+        <li><a href="https://github.com/ongaroandrea" rel="me">github.com/ongaroandrea</a></li>
+        <li><a href="https://www.linkedin.com/in/ongaro-andrea" rel="me">LinkedIn</a></li>
+        <li class="no-print"><button type="button" class="link-button" data-print>Save as PDF</button></li>
+      </ul>
+    </header>
 
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
+    <main id="main">
+      <!-- PROFILE -->
+      <section class="cv-section" aria-labelledby="profile">
+        <h2 id="profile">Profile</h2>
+        <p class="cv-summary">
+          Software engineer with an MSc in Computer Engineering (Artificial Intelligence and Data
+          Analytics) from Politecnico di Torino. Most of my work is on the backend: I design APIs and
+          databases, put them in production and keep them running, and build the web and mobile apps
+          around them when a project needs it. At university I worked on computer vision, language models
+          and robotics, and I like bringing that into products people use every day. I'm looking for a
+          backend or applied AI role.
+        </p>
+      </section>
 
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">Portfolio Title</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:whitevans.eth@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+      <section class="cv-section" aria-labelledby="experience">
+        <h2 id="experience">Experience</h2>
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <!-- 
-            TODO
-
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
-          <img src="./assets/images/1311.png" class="portfolio-header-image">
-          <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311">
-            <span class="image-caption">Unemployables #1311</span>
-          </a>
-        </div>
-
-          <!-- 
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm @ndoherty_eth.</span>
-              <div class="body-text">I’m a freelance designer and developer who aims to help other creatives build out their portfolios, skillset, and businesses.</div>
-            </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-        </div>
-      </div>
-
-      <!-- ABOUT SECTION -->
-      <!-- 
-        TODO
-
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
-      <div id="about-section">
-        <span class="subheader-text">My Background / About Me</span>
-        <div class="about-section-content">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
-          <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div>
-        </div>
-      </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <!-- 
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
-            </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
+        <article class="entry">
+          <p class="entry-date"><time datetime="2022-11">Nov 2022</time> – Present</p>
+          <div class="entry-body">
+            <h3 class="entry-title">Freelance Software Engineer</h3>
+            <p class="entry-place">Synergy Design - Cesena</p>
+            <ul class="entry-points">
+              <li><a href="./project-pages/erpsynapse.html">ERP Synapse</a>: rebuilt an ERP prototype as a multi-tenant platform for several client companies (Node.js, PostgreSQL, SvelteKit), and moved the old MySQL data across.</li>
+              <li>Wrote the security layer: 2FA by role, role-based access, PostgreSQL row-level security and an audit log.</li>
+              <li>Published the Flutter app on the App Store and Google Play. Now adding AI for quotes and meeting transcripts.</li>
+              <li><a href="./project-pages/tastevin.html">TasteVin</a>: got the API ready for production (Redis rate limits, OpenAPI, 557 tests), and built the admin dashboard and an AI sommelier that runs on the phone.</li>
+            </ul>
           </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
+        </article>
+
+        <article class="entry">
+          <p class="entry-date"><time datetime="2022-06">Jun 2022</time> – <time datetime="2023-08">Aug 2023</time></p>
+          <div class="entry-body">
+            <h3 class="entry-title">Software Engineer</h3>
+            <p class="entry-place">Paolucci Marketing - Rimini</p>
+            <ul class="entry-points">
+              <li>A web management system for more than 10,000 registered users (SvelteKit, Node.js, AWS S3).</li>
+              <li>A generator of portfolio sites for motorsport photographers, with a Flutter app for uploading photos (Supabase, S3, WordPress).</li>
+              <li>A Python OCR pipeline that reads race numbers in photos and renames thousands of files per event.</li>
+            </ul>
           </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
+        </article>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="cv-section" aria-labelledby="education">
+        <h2 id="education">Education</h2>
+
+        <article class="entry">
+          <p class="entry-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-07">Jul 2025</time></p>
+          <div class="entry-body">
+            <h3 class="entry-title">MSc, Computer Engineering</h3>
+            <p class="entry-place">Politecnico di Torino - Turin</p>
+            <p>Track: Artificial Intelligence and Data Analytics.</p>
+            <p>Thesis: <a href="./project-pages/vlm-thesis.html"><em>Evaluating Open-Weight Vision-Language Models for Difference Identification in Rendered Images</em></a>. Supervisors: Prof. Andrea Sanna, Federico Manuri.</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </article>
 
-    <!-- FOOTER -->
-    <div id="footer">
-      <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+        <article class="entry">
+          <p class="entry-date"><time datetime="2019">2019</time> – <time datetime="2022">2022</time></p>
+          <div class="entry-body">
+            <h3 class="entry-title">BSc, Computer Science and Engineering</h3>
+            <p class="entry-place">Alma Mater Studiorum – Università di Bologna - Cesena</p>
+            <p>Thesis: <a href="./project-pages/soundsense.html"><em>Raising Awareness About Digital Wellbeing: Data Visualization and Sonification in a Mobile Application</em></a>. Supervisor: Dr. Catia Prandi.</p>
+          </div>
+        </article>
+      </section>
 
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-    </div>
+      <section class="cv-section" aria-labelledby="projects">
+        <h2 id="projects">Selected projects</h2>
+        <ul class="projects">
+          <li class="project">
+            <img src="./assets/images/projects/erpsynapse/hero.jpg" alt="" width="1600" height="686" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/erpsynapse.html">ERP Synapse</a></h3>
+            <p>A website for service companies with a web portal and a mobile app.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/tastevin/hero.jpg" style="object-position: left center" alt="" width="1024" height="500" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/tastevin.html">TasteVin</a></h3>
+            <p>A wine cellar and tasting app with an AI sommelier that runs on the phone.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/code.jpeg" alt="" width="1200" height="800" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/vlm-thesis.html">VLMs for Rendered Images</a></h3>
+            <p>MSc thesis. Can open-weight vision-language models spot what's wrong in a render?</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/soundsense/app-home.jpg" style="object-position: center top" alt="" width="645" height="1400" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/soundsense.html">SoundSense</a></h3>
+            <p>BSc thesis. An iPhone app that turns your health data into music.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/lcn-pose/humansc3d.jpg" alt="" width="1600" height="998" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/lcn-pose.html">LCN-Pose</a></h3>
+            <p>Got a 2019 pose estimation paper running again on TensorFlow 2 and checked its results.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/video-grounding/query-templates.jpg" alt="" width="1394" height="1076" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/video-grounding.html">LLM-Supervised Video Grounding</a></h3>
+            <p>Training video grounding on questions written by Gemma instead of people.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/laura/simulation.jpg" alt="" width="1600" height="1010" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/laura.html">LAURA</a></h3>
+            <p>A robot that finds its way through a forest. First place at Challenge@PoliTo.</p>
+          </li>
+          <li class="project">
+            <img src="./assets/images/projects/ezelectronics/hero.jpg" style="object-position: center top" alt="" width="1600" height="1066" loading="lazy">
+            <h3 class="project-title"><a href="./project-pages/ezelectronics.html">EZElectronics</a></h3>
+            <p>A TypeScript and Express store backend, covered by 403 tests.</p>
+          </li>
+        </ul>
+      </section>
 
-	</body>
+      <section class="cv-section" aria-labelledby="skills">
+        <h2 id="skills">Skills</h2>
+        <dl class="skills">
+          <div><dt>Backend</dt><dd>Node.js, Express, TypeScript, PostgreSQL, Drizzle, Redis, REST.</dd></div>
+          <div><dt>Infrastructure</dt><dd>Linux, Docker, CI/CD, AWS S3</dd></div>
+          <div><dt>AI / ML</dt><dd>PyTorch, LLM APIs, on-device LLMs, computer vision, reinforcement learning, ROS 2</dd></div>
+          <div><dt>Frontend &amp; mobile</dt><dd>Svelte, React, Flutter, App Store and Google Play releases</dd></div>
+          <div><dt>Languages</dt><dd>Italian (native), English (B2)</dd></div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p>Andrea Ongaro - Updated <time datetime="2026-11">November 2026</time></p>
+    </footer>
+  </div>
+</body>
 </html>

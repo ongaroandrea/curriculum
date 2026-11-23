@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LCN-Pose - Andrea Ongaro</title>
+  <meta name="description" content="LCN-Pose: porting the ICCV 2019 Locally Connected Networks code for 3D human pose estimation to TensorFlow 2 and reproducing its results.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">LCN-Pose</h1>
+        <p class="project-lede">3D human pose estimation with Locally Connected Networks, a paper from ICCV 2019. Its code no longer ran, so we brought it up to date and checked whether the results still hold.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Developer, team of 2</dd></div>
+          <div><dt>When</dt><dd>2025</dd></div>
+          <div><dt>Context</dt><dd>Machine Learning for Vision and Multimedia, Politecnico di Torino</dd></div>
+          <div><dt>Stack</dt><dd>TensorFlow 2.13, CUDA, NumPy, Kaggle</dd></div>
+        </dl>
+        <ul class="project-links">
+          <li><a href="https://github.com/ongaroandrea/lcn-pose">Code on GitHub</a></li>
+          <li><a href="https://www.canva.com/design/DAGiwWCsfd8/4b3oL7m07S4F63RH8743-w/view">Presentation (Canva)</a></li>
+        </ul>
+      </header>
+
+      <figure class="hero-figure">
+        <img src="../assets/images/projects/lcn-pose/humansc3d.jpg" alt="A HumanSC3D video frame next to the same frame with the predicted skeleton drawn over the person" width="1600" height="998">
+      </figure>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <div class="prose">
+          <p>The authors released TensorFlow code in 2019, and it didn't run on today's libraries or GPUs. We ported it to TensorFlow 2.13 and wrote new data loaders for Human3.6M, HumanSC3D and MPII. Then we added scripts for training, evaluation, inference and hyperparameter search.</p>
+          <p>Evaluation covers both standard protocols: MPJPE, and MPJPE after Procrustes alignment. We also added flip, rotation and translation augmentation, and a viewer that draws the predicted skeleton on HumanSC3D frames.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="results">
+        <h2 id="results">Results</h2>
+        <div class="prose">
+          <p>On Human3.6M, HumanSC3D and MPII we got 35.5 mm MPJPE. The paper reports 32.5 mm, so we came close without matching it.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

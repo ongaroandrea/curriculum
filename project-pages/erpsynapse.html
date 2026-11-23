@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERP Synapse - Andrea Ongaro</title>
+  <meta name="description" content="ERP Synapse is a multi-tenant ERP for service companies, with a Node.js and PostgreSQL API, a SvelteKit portal and a Flutter app.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">ERP Synapse</h1>
+        <p class="project-lede">An ERP for engineering firms and service companies. When I started it was a PHP prototype; today it runs several client companies on one platform, with an API, a web portal and a mobile app.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Lead developer (freelance)</dd></div>
+          <div><dt>When</dt><dd>2022 – present</dd></div>
+          <div><dt>Client</dt><dd>Synergy Design</dd></div>
+          <div><dt>Stack</dt><dd>Node.js, Express, PostgreSQL, SvelteKit, Flutter</dd></div>
+        </dl>
+        <ul class="project-links">
+          <li><a href="https://erpsynapse.com">erpsynapse.com</a></li>
+        </ul>
+      </header>
+
+      <figure class="hero-figure">
+        <img src="../assets/images/projects/erpsynapse/hero.jpg" alt="ERP Synapse store banner: time tracking, leave and support in one app" width="1600" height="686">
+      </figure>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <div class="prose">
+          <p>Each client company gets its own users, modules and branding, and the data stays separate even though everyone shares the same servers. People use it every day to clock in, ask for leave, plan projects, send quotes and invoices, and open support tickets.</p>
+          <p>I rewrote the API in Node.js, Express and PostgreSQL, moved the old MySQL data into the new schema, and built a new portal in SvelteKit and Tailwind.</p>
+        </div>
+      </section>
+
+
+
+      <section class="cv-section" aria-labelledby="modules">
+        <h2 id="modules">What's in it</h2>
+        <ul class="entry-points prose">
+          <li>Time tracking from the portal or the app, with geolocation, mileage claims, push reminders, and automatic close of sessions people forget to stop.</li>
+          <li>Holidays, permits and sick leave, approved by a manager.</li>
+          <li>Clients, projects and phases, planning calendars, workload views at 1, 3 and 6 months, a skills matrix, and productivity numbers.</li>
+          <li>Quotes in Italian and English with PDF revisions. Accepted quotes turn into progress billing, and e-invoices go to the Italian SdI through Fatture in Cloud, Aruba or FatturaPA XML.</li>
+          <li>A document centre with read receipts, and a company mailbox inside the portal on DNS-verified domains.</li>
+          <li>Virtual offices with rooms, chat and quick calls, plus support tickets with live chat and screenshots.</li>
+        </ul>
+      </section>
+
+      <section class="cv-section" aria-labelledby="app">
+        <h2 id="app">Mobile app</h2>
+        <div class="prose">
+          <p>The Flutter app is on the App Store and Google Play. Staff log in with 2FA, start and stop the clock, request leave, check their team, and chat with support. Push notifications open the screen they refer to.</p>
+        </div>
+        <div class="gallery phones">
+          <figure>
+            <img src="../assets/images/projects/erpsynapse/app-01-running.jpg" alt="App home screen with a running timer for a client project" width="645" height="1400" loading="lazy">
+            <figcaption>Clocking in on a project.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/erpsynapse/app-03-leave.jpg" alt="Leave screen listing holidays and permits" width="645" height="1400" loading="lazy">
+            <figcaption>Leave and permits.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/erpsynapse/app-06-tickets.jpg" alt="List of support tickets" width="645" height="1400" loading="lazy">
+            <figcaption>Support tickets.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/erpsynapse/app-05-ticket-chat.jpg" alt="Chat inside a support ticket" width="645" height="1400" loading="lazy">
+            <figcaption>Chat inside a ticket.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LAURA - Andrea Ongaro</title>
+  <meta name="description" content="LAURA is an autonomous robot that navigates a forest and recognises plant species. It won Challenge@PoliTo.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">LAURA</h1>
+        <p class="project-lede">A robot that drives itself from A to B through a forest and recognises plants on the way. We won Challenge@PoliTo with a live demo outdoors.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Team lead, 5 members</dd></div>
+          <div><dt>Context</dt><dd>Challenge@PoliTo, first place</dd></div>
+          <div><dt>Stack</dt><dd>ROS 2, YOLOv8, PyTorch, TD3, Gazebo, Python</dd></div>
+        </dl>
+
+      </header>
+
+      <figure class="hero-figure">
+        <img src="../assets/images/projects/laura/simulation.jpg" alt="Gazebo forest simulation with the robot's LiDAR scan, its camera view, and the map in RViz" width="1600" height="1010">
+      </figure>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <div class="prose">
+          <p>I led a team of five. My part was plant species recognition with YOLOv8 inside ROS 2, and connecting a TD3 reinforcement-learning policy for obstacle avoidance to the LiDAR and GNSS planner.</p>
+          <p>We trained and tested in a Gazebo forest before taking the robot outside. The code is under NDA.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="results">
+        <h2 id="results">Results</h2>
+        <div class="prose">
+          <p>First place at Challenge@PoliTo. In the live demo outdoors, the robot drove from A to B on its own.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

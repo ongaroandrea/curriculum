@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EZElectronics - Andrea Ongaro</title>
+  <meta name="description" content="EZElectronics is a TypeScript and Express backend for an electronics store, covered by 403 automated tests.">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="../assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <script defer src="../js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page">
+    <a class="back-link no-print" href="../index.html#projects">← Back to CV</a>
+
+    <main id="main">
+      <header>
+        <h1 class="cv-name">EZElectronics</h1>
+        <p class="project-lede">A web app for electronics shops. Managers add products and confirm sales, customers buy and leave reviews, and admins look after the data. I led the team that built and tested the server.</p>
+
+        <dl class="project-facts">
+          <div><dt>Role</dt><dd>Team lead, 4-person international team</dd></div>
+          <div><dt>When</dt><dd>2024</dd></div>
+          <div><dt>Context</dt><dd>Software Engineering, Politecnico di Torino</dd></div>
+          <div><dt>Stack</dt><dd>TypeScript, Node.js, Express, SQLite, Jest, React</dd></div>
+        </dl>
+        <ul class="project-links">
+          <li><a href="https://github.com/ongaroandrea/software-engineering-project">Code on GitHub</a></li>
+        </ul>
+      </header>
+
+      <figure class="hero-figure">
+        <img src="../assets/images/projects/ezelectronics/hero.jpg" alt="EZElectronics storefront mock-up with product categories and a product grid" width="1600" height="1066">
+      </figure>
+
+      <section class="cv-section" aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <div class="prose">
+          <p>First we wrote the requirements and the design: context, use-case, glossary and deployment diagrams, and mock-ups of the screens. Then we built the server against the API spec we were given, so the React client would work without changes.</p>
+          <p>The server is TypeScript on Express, split into routers, controllers and data-access objects over SQLite. Login uses Passport sessions, and express-validator checks every request.</p>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="testing">
+        <h2 id="testing">Testing</h2>
+        <div class="prose">
+          <p>We wrote unit, integration and API tests with Jest and Supertest. At the end we had 403 tests in 17 suites, all passing, with 90% statement coverage and 93% function coverage.</p>
+        </div>
+        <div class="gallery">
+          <figure class="wide">
+            <img src="../assets/images/projects/ezelectronics/coverage.png" alt="Jest coverage report: 403 tests passed, 90.17% statements, 92.71% functions" width="1118" height="619" loading="lazy">
+            <figcaption>Jest coverage report for the server.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cv-section" aria-labelledby="gallery">
+        <h2 id="gallery">Screen mock-ups</h2>
+        <div class="gallery">
+          <figure>
+            <img src="../assets/images/projects/ezelectronics/home.jpg" alt="Storefront home page mock-up" width="1190" height="1600" loading="lazy">
+            <figcaption>Home page.</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/projects/ezelectronics/category.jpg" alt="Category page mock-up with filters and smartphones" width="858" height="1600" loading="lazy">
+            <figcaption>Category page with filters.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cv-footer">
+      <p><a href="../index.html">Andrea Ongaro</a> - <a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></p>
+    </footer>
+  </div>
+</body>
+</html>

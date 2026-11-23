@@ -1,0 +1,308 @@
+/* Fonts: Hanken Grotesk (variable, SIL OFL), served from assets/fonts ---- */
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/hanken-grotesk-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/hanken-grotesk-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --bg: #fdfdfc;
+  --ink: #15171c;
+  --ink-2: #4a505c;
+  --rule: #dfe1e6;
+  --accent: #1d4ed8;
+  --accent-strong: #173ea8;
+  --accent-wash: #e6ecfb;
+
+  --font: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --date-col: 10rem;
+  --measure: 46rem;
+}
+
+/* Base ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-color: var(--rule) transparent;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; }
+img { display: block; max-width: 100%; height: auto; }
+
+::selection { background: var(--accent-wash); color: var(--ink); }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 150ms ease-out, text-decoration-color 150ms ease-out;
+}
+a:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--ink);
+  color: var(--bg);
+  z-index: 10;
+}
+.skip-link:focus { top: 1rem; }
+.skip-link:hover { color: var(--bg); }
+
+/* Page ------------------------------------------------------------------ */
+
+.page {
+  max-width: calc(var(--measure) + 2 * clamp(1.25rem, 5vw, 3rem));
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 3rem) 3rem;
+}
+
+/* Header ---------------------------------------------------------------- */
+
+.cv-name {
+  font-size: clamp(2.25rem, 1.4rem + 3.5vw, 3.25rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.cv-headline {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.cv-meta {
+  margin-top: 0.25rem;
+  color: var(--ink-2);
+}
+
+.cv-contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+.link-button {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.link-button:hover { color: var(--accent-strong); text-decoration-thickness: 2px; }
+
+/* Sections -------------------------------------------------------------- */
+
+.cv-section { margin-top: clamp(2.75rem, 6vw, 3.75rem); }
+
+.cv-section > h2 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.cv-summary { max-width: 38rem; font-size: 1.125rem; }
+
+/* Entries: date column + content ---------------------------------------- */
+
+.entry {
+  display: grid;
+  grid-template-columns: var(--date-col) 1fr;
+  gap: 0.25rem 2rem;
+  break-inside: avoid;
+}
+.entry + .entry { margin-top: 2rem; }
+
+.entry-date {
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  padding-top: 0.15rem;
+  white-space: nowrap;
+}
+
+.entry-title { font-size: 1.125rem; font-weight: 600; line-height: 1.4; }
+.entry-place { color: var(--ink-2); margin-bottom: 0.5rem; }
+
+.entry-points { padding-left: 1.1rem; }
+.entry-points li + li { margin-top: 0.25rem; }
+.entry-points li::marker { color: var(--ink-2); }
+
+/* Publications ---------------------------------------------------------- */
+
+.pubs { padding-left: 1.5rem; }
+.pubs li + li { margin-top: 0.75rem; }
+.pubs li::marker { color: var(--ink-2); }
+
+/* Projects -------------------------------------------------------------- */
+
+.projects {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 2rem 1.5rem;
+}
+
+.project { position: relative; }
+
+.project img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--rule);
+  margin-bottom: 0.85rem;
+  transition: filter 200ms ease-out;
+}
+
+.project-title { font-size: 1.0625rem; font-weight: 600; line-height: 1.35; }
+.project-title a { color: var(--ink); text-decoration: none; }
+/* Whole tile is clickable; the heading link stretches over it. */
+.project-title a::after { content: ""; position: absolute; inset: 0; }
+.project:hover .project-title a { color: var(--accent); text-decoration: underline; }
+.project:hover img { filter: brightness(0.92); }
+.project p { color: var(--ink-2); font-size: 0.9375rem; margin-top: 0.25rem; }
+
+/* Skills ---------------------------------------------------------------- */
+
+.skills > div {
+  display: grid;
+  grid-template-columns: var(--date-col) 1fr;
+  gap: 0.25rem 2rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+.skills > div:first-child { border-top: 0; padding-top: 0; }
+.skills dt { font-weight: 600; }
+
+/* Footer ---------------------------------------------------------------- */
+
+.cv-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+}
+
+/* Project pages --------------------------------------------------------- */
+
+.back-link { display: inline-block; font-weight: 500; margin-bottom: 2.5rem; }
+
+.project-lede { margin-top: 1rem; font-size: 1.1875rem; color: var(--ink-2); max-width: 38rem; }
+
+.project-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem 2rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+.project-facts dt { color: var(--ink-2); font-size: 0.875rem; }
+.project-facts dd { font-weight: 500; }
+
+.hero-figure { margin-top: 2.5rem; }
+.hero-figure img, .gallery img { width: 100%; border-radius: 4px; background: var(--rule); }
+
+.prose p + p { margin-top: 1rem; }
+.prose { max-width: 38rem; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 1.5rem;
+}
+.gallery .wide { grid-column: 1 / -1; }
+/* Phone screenshots: four portrait images in a row. */
+.gallery.phones { grid-template-columns: repeat(4, 1fr); gap: 1.5rem 1rem; }
+.gallery.phones img { border-radius: 10px; }
+
+.project-links { list-style: none; display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; margin-top: 1.25rem; font-weight: 500; }
+
+figcaption { margin-top: 0.5rem; color: var(--ink-2); font-size: 0.9375rem; }
+
+/* Small screens --------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .entry,
+  .skills > div { grid-template-columns: 1fr; }
+  .entry-date { padding-top: 0; }
+  .gallery { grid-template-columns: 1fr; }
+  .gallery.phones { grid-template-columns: 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* Print / Save as PDF --------------------------------------------------- */
+
+@media print {
+  @page { size: A4; margin: 16mm 16mm 14mm; }
+
+  :root { --date-col: 7.5rem; }
+  body { font-size: 10pt; line-height: 1.45; background: #fff; }
+  .page { max-width: none; padding: 0; }
+  .no-print, .skip-link, .project img, .cv-footer { display: none; }
+
+  a { color: var(--ink); text-decoration: none; }
+  .cv-name { font-size: 24pt; }
+  .cv-headline { font-size: 12pt; margin-top: 0.3rem; }
+  .cv-contact { margin-top: 0.6rem; gap: 0.2rem 1rem; }
+  .cv-section { margin-top: 1.4rem; }
+  .cv-section > h2 { margin-bottom: 0.7rem; padding-bottom: 0.25rem; font-size: 11pt; break-after: avoid; }
+  .cv-summary { font-size: 10.5pt; max-width: none; }
+  .entry + .entry { margin-top: 0.8rem; }
+  .entry-title { font-size: 10.5pt; }
+  .projects { grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem 1rem; }
+  .project-title a::after { content: none; }
+}
