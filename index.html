@@ -8,6 +8,7 @@
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
 
   <link rel="preload" href="./assets/fonts/hanken-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="./css/styles.css">
 
   <script defer src="./js/script.js"></script>
@@ -19,13 +20,13 @@
     <!-- HEADER: name, headline and contact details -->
     <header class="cv-header">
       <h1 class="cv-name">Andrea Ongaro</h1>
-      <p class="cv-headline">Software Engineer - Backend and AI</p>
+      <p class="cv-headline">Software Engineer</p>
       <p class="cv-meta">Rimini, Italy</p>
 
       <ul class="cv-contact">
         <li><a href="#" data-mail="dGkub29oYXlAMzAxb3JhZ25vYWVyZG5h">Email</a></li>
         <li><a href="https://github.com/ongaroandrea" rel="me">github.com/ongaroandrea</a></li>
-        <li><a href="https://www.linkedin.com/in/ongaro-andrea" rel="me">LinkedIn</a></li>
+        <li class="no-print"><a href="https://www.linkedin.com/in/ongaro-andrea" rel="me">LinkedIn</a></li>
         <li class="no-print"><button type="button" class="link-button" data-print>Save as PDF</button></li>
       </ul>
     </header>
@@ -35,12 +36,11 @@
       <section class="cv-section" aria-labelledby="profile">
         <h2 id="profile">Profile</h2>
         <p class="cv-summary">
-          Software engineer with an MSc in Computer Engineering (Artificial Intelligence and Data
-          Analytics) from Politecnico di Torino. Most of my work is on the backend: I design APIs and
-          databases, put them in production and keep them running, and build the web and mobile apps
-          around them when a project needs it. At university I worked on computer vision, language models
-          and robotics, and I like bringing that into products people use every day. I'm looking for a
-          backend or applied AI role.
+            I am a software engineer with a MSc in Computer Engineering focused on Artificial Intelligence from Politecnico di Torino.
+            My interests are computer vision, language models and robotics, and I like bringing that into products people use every day.
+
+            Most of my past works are on the backend: I design APIs and databases, put them in production and keep them running, and build the web and mobile apps around them when a project needs it.
+            In my free time I like doing outdoor activities.
         </p>
       </section>
 
@@ -48,7 +48,7 @@
         <h2 id="experience">Experience</h2>
 
         <article class="entry">
-          <p class="entry-date"><time datetime="2022-11">Nov 2022</time> – Present</p>
+          <p class="entry-date"><time datetime="2022-11">Nov 2022</time> – Current</p>
           <div class="entry-body">
             <h3 class="entry-title">Freelance Software Engineer</h3>
             <p class="entry-place">Synergy Design - Cesena</p>
@@ -61,7 +61,7 @@
         </article>
 
         <article class="entry">
-          <p class="entry-date"><time datetime="2022-06">Jun 2022</time> – <time datetime="2023-08">Aug 2023</time></p>
+          <p class="entry-date"><time datetime="2022-06">Jun 2022</time> - Current</time></p>
           <div class="entry-body">
             <h3 class="entry-title">Software Engineer</h3>
             <p class="entry-place">Paolucci Marketing - Rimini</p>
@@ -79,21 +79,25 @@
         <h2 id="education">Education</h2>
 
         <article class="entry">
-          <p class="entry-date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2025-07">Jul 2025</time></p>
+          <p class="entry-date"><time datetime="2023-09">Sep 2023</time> – Current</time></p>
           <div class="entry-body">
             <h3 class="entry-title">MSc, Computer Engineering</h3>
             <p class="entry-place">Politecnico di Torino - Turin</p>
-            <p>Track: Artificial Intelligence and Data Analytics.</p>
-            <p>Thesis: <a href="./project-pages/vlm-thesis.html"><em>Evaluating Open-Weight Vision-Language Models for Difference Identification in Rendered Images</em></a>. Supervisors: Prof. Andrea Sanna, Federico Manuri.</p>
+            <p>Field: Artificial Intelligence and Data Analytics.</p>
+            <p>Supervisors: Prof. Andrea Sanna, Federico Manuri.</p>
+            <p>Thesis: <a href="./project-pages/vlm-thesis.html"><em>Evaluating Open-Weight Vision-Language Models for Difference Identification in Rendered Images</em></a>.</p>
+
           </div>
         </article>
 
         <article class="entry">
-          <p class="entry-date"><time datetime="2019">2019</time> – <time datetime="2022">2022</time></p>
+          <p class="entry-date"><time datetime="2019">2019</time> – <time datetime="2022"> 2022</time></p>
           <div class="entry-body">
             <h3 class="entry-title">BSc, Computer Science and Engineering</h3>
             <p class="entry-place">Alma Mater Studiorum – Università di Bologna - Cesena</p>
-            <p>Thesis: <a href="./project-pages/soundsense.html"><em>Raising Awareness About Digital Wellbeing: Data Visualization and Sonification in a Mobile Application</em></a>. Supervisor: Dr. Catia Prandi.</p>
+            <p>Field: Digital Wellbeing</p>
+            <p>Supervisor: Prof. Catia Prandi - Dr. Chiara Ceccarini</p>
+            <p>Thesis: <a href="./project-pages/soundsense.html"><em>Raising Awareness About Digital Wellbeing: Data Visualization and Sonification in a Mobile Application</em></a>. </p>
           </div>
         </article>
       </section>
@@ -149,7 +153,7 @@
         <dl class="skills">
           <div><dt>Backend</dt><dd>Node.js, Express, TypeScript, PostgreSQL, Drizzle, Redis, REST.</dd></div>
           <div><dt>Infrastructure</dt><dd>Linux, Docker, CI/CD, AWS S3</dd></div>
-          <div><dt>AI / ML</dt><dd>PyTorch, LLM APIs, on-device LLMs, computer vision, reinforcement learning, ROS 2</dd></div>
+          <div><dt>AI / ML</dt><dd>PyTorch, LLM APIs, on-device LLMs, computer vision, reinforcement learning</dd></div>
           <div><dt>Frontend &amp; mobile</dt><dd>Svelte, React, Flutter, App Store and Google Play releases</dd></div>
           <div><dt>Languages</dt><dd>Italian (native), English (B2)</dd></div>
         </dl>
